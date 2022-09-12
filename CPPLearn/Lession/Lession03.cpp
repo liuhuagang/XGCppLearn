@@ -305,4 +305,130 @@ namespace L03 {
 		cout << sizeof(bool);
 	}
 
+	void EnumTestFun00()
+	{
+		Color MyColor;
+		MyColor = white;
+
+		int ColorNum = red;
+		ColorNum = red + 1;
+		MyColor = Color(222222);
+		cout << MyColor;
+
+		if (MyColor == Color::black)
+		{
+			cout << 1111;
+
+		}
+
+		if (MyColor == Color::white)
+		{
+			cout << 2222;
+		}
+
+
+	}
+
+	void PointTestFun01()
+	{
+		int Num = 11;
+		int Num_2 = 998;
+
+		int* NumPointer;
+		int* NumPointer2;
+		NumPointer = &Num;
+		NumPointer2 = &Num_2;
+		cout << "Num:" << Num << endl;
+		cout << "&Num:" << &Num << endl;
+
+		cout << "Num_2:" << Num_2 << endl;
+		cout << "&Num_2:" << &Num_2 << endl;
+
+		cout << "NumPointer:" << NumPointer << endl;
+		cout << "&NumPointer:" << &NumPointer << endl;
+
+
+		cout << "NumPointer:" << NumPointer2 << endl;
+		cout << "&NumPointer2:" << &NumPointer2 << endl;
+
+
+		cout << "*NumPointer:" << *NumPointer << endl;
+		*NumPointer = *NumPointer + 11;
+		cout << "*NumPointer:" << *NumPointer << endl;
+		cout << "Num:" << Num << endl;
+	}
+
+	void PointTestFun02()
+	{
+		//X32 X64位系统是不同   指针32位系统是四个字节，64位系统是八个字节
+		// 定义了一个int类型的指针  它占用8个字节
+		int* NumPointer;		
+	
+		// 定义了一个int类型的变量	它占用4个字节
+		int Num ;
+
+
+		cout << sizeof(Num)<<endl;
+		cout << sizeof(NumPointer)<<endl;
+
+
+		cout << "&NumPointer:" << &NumPointer << endl;
+		cout << "&Num:" << &Num << endl;
+
+
+		Num = 10;
+		NumPointer = &Num;
+	//	*NumPointer = Num; 直接用是错误的
+		cout << "NumPointer:" << NumPointer << endl;
+		cout << "Num:" << Num << endl;
+
+		//拿出指针存的地址 取内存里面找出对应的额值；
+		cout << "拿出指针存的地址 取内存里面找出对应的额值；:"  << endl;
+		cout << "*NumPointer:" << *NumPointer << endl;
+
+		*NumPointer = *NumPointer + 10;
+		cout << "*NumPointer:" << *NumPointer << endl;
+		cout << "------------------" << endl;
+		int Num2 = 100;
+		NumPointer = &Num2;
+		*NumPointer = 1000;
+		cout << "Num:" << Num << endl;
+		cout << "*NumPointer:" << *NumPointer << endl;
+		cout << "Num2:" << Num2 << endl;
+
+		int* NumPointer2 = &Num2;
+		/*
+		int* NumPointer2;
+		NumPointer2 =&Num2;
+		*/
+		if (NumPointer = NumPointer2)
+		{
+			cout << "same"<<endl;
+		}
+
+		*NumPointer += 100;
+		*NumPointer2 += 20;
+
+		cout << "Num2:" << Num2 << endl;
+
+
+	}
+
+	void PointTestFun03()
+	{
+		/*
+		00000038736FF9C8
+		00000038736FF9C8
+		00000038736FF9CC
+		//这个代表的是字节 不是位
+		*/
+		int ArrayInt[5];
+		cout << ArrayInt<<endl;
+		cout << &ArrayInt[0]<< endl;
+		cout << &ArrayInt[1]<< endl;
+		cout << &ArrayInt[2] << endl;
+		cout << &ArrayInt[3] << endl;
+		cout << &ArrayInt[4] << endl;
+	}
+
 }

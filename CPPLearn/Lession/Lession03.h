@@ -65,4 +65,17 @@ namespace L03
 
 	void BitTest();
 
+	enum Color {
+		red=1, orange=2, black=4, white=8,Max = 100
+
+	};
+
+	void EnumTestFun00();
+
+	void PointTestFun01();
+
+	void PointTestFun02();
+	void PointTestFun03();
+
+
 }

@@ -10,7 +10,7 @@ using namespace L03;
 //≤‚ ‘
 int main()
 {   
-    BitTest();
+    PointTestFun02();
     return 0;
 }
 

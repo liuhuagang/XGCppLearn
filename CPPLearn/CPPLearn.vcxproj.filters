@@ -2,10 +2,10 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
     <ItemGroup>
         <Filter Include="Lession">
-            <UniqueIdentifier>{4FCEBEBA-79F9-480C-B2AF-42647852D4D3}</UniqueIdentifier>
+            <UniqueIdentifier>{76750175-3859-45DC-8C2C-E62C43FC62DD}</UniqueIdentifier>
         </Filter>
         <Filter Include="x64">
-            <UniqueIdentifier>{7571B4DA-5187-44B7-ABA2-17918DF7A6A1}</UniqueIdentifier>
+            <UniqueIdentifier>{3237A40D-70FF-4141-A576-995E19137730}</UniqueIdentifier>
         </Filter>
     </ItemGroup>
     <ItemGroup>
@@ -19,6 +19,9 @@
         <ClCompile Include="Lession\Lession03.cpp">
             <Filter>Lession</Filter>
         </ClCompile>
+        <ClCompile Include="Lession\Lession04.cpp">
+            <Filter>Lession</Filter>
+        </ClCompile>
     </ItemGroup>
     <ItemGroup>
         <ClInclude Include="Lession\Lession01.h">
@@ -28,6 +31,9 @@
             <Filter>Lession</Filter>
         </ClInclude>
         <ClInclude Include="Lession\Lession03.h">
+            <Filter>Lession</Filter>
+        </ClInclude>
+        <ClInclude Include="Lession\Lession04.h">
             <Filter>Lession</Filter>
         </ClInclude>
     </ItemGroup>
