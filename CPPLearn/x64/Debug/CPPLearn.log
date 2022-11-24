@@ -1,6 +1,2 @@
-﻿  Lession03.cpp
-E:\CPP_Project\CPPLearn\CPPLearn\Lession\Lession03.cpp(275,14): warning C4101: 'S1': unreferenced local variable
-E:\CPP_Project\CPPLearn\CPPLearn\Lession\Lession03.cpp(267,13): warning C4101: 'Struct2': unreferenced local variable
-E:\CPP_Project\CPPLearn\CPPLearn\Lession\Lession03.cpp(267,5): warning C4101: 'Struct1': unreferenced local variable
-E:\CPP_Project\CPPLearn\CPPLearn\Lession\Lession03.cpp(275,18): warning C4101: 'S2': unreferenced local variable
+﻿  Lession998.cpp
   CPPLearn.vcxproj -> E:\CPP_Project\CPPLearn\x64\Debug\CPPLearn.exe

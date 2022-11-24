@@ -78,4 +78,44 @@ namespace L03
 	void PointTestFun03();
 
 
+
+	void PointNewTestFun00();
+
+
+	void PointNewAndDeleteTestFun00();
+
+	void PointNewAndDeleteTestFun01();
+
+	void PointNewAndDeleteTestFun02();
+
+	void PointMath();
+
+
+	void PointMath01();
+
+	void PointAndArrayFun00();
+
+	void PointAndArrayFun01();
+
+	struct MyStruct9918
+	{
+		int c = 11;
+
+		MyStruct9918();
+
+		~MyStruct9918();
+	};
+
+	void PointAndStructFun00();
+
+	void PointAndStructFun01();
+	MyStruct9918* PointAndStructFun02();
+
+	static double MyDouble = 100.520;
+
+	void PointStrcutArrayFun00();
+
+	void ArrayAndVectorFun00();
+
+
 }

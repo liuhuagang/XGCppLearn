@@ -4,16 +4,18 @@
 #include <iostream>
 #include <cstring>
 #include <string>
-
+#include <vector>
+#include <array>
 using namespace std;
-
+int a988 = 100;
 //tetst
 namespace L03 {
 
 
 	void ArrayTestFun00()
 	{	
-
+		a988 = 112;
+	
 		int Cards[3]={10,30,50};
 
 /*
@@ -261,6 +263,7 @@ namespace L03 {
 
 	void StructDeclare()
 	{
+/*
 		struct MyStruct {
 			int a;
 			float b;
@@ -272,7 +275,7 @@ namespace L03 {
 			float b;
 		};
 
-		MyStruct_P S1, S2;
+		MyStruct_P S1, S2;*/
 
 	}
 
@@ -431,4 +434,295 @@ namespace L03 {
 		cout << &ArrayInt[4] << endl;
 	}
 
+	void PointNewTestFun00()
+	{
+		int Number = 100;
+		double NumberDou = 100.0;
+
+		cout << "Size of Number: " << sizeof(Number) << endl;
+		cout << "Size of NumberDou: " << sizeof(NumberDou) << endl;
+
+		//int* NumberPoniter = &Number;
+		int * NumberPoniter  = new int ;
+		double * NumberDouPoniter = new double;
+		cout << "Size of NumberPoniter: " << sizeof(NumberPoniter) << endl;
+		cout << "Size of NumberDouPoniter: " << sizeof(NumberDouPoniter) << endl;
+
+
+		cout << " NumberPoniter: " << NumberPoniter << endl;
+		cout << " NumberDouPoniter: " << NumberDouPoniter << endl;
+
+		*NumberPoniter = 99;
+		*NumberDouPoniter = 99.1;
+
+		cout << " *NumberPoniter: " << *NumberPoniter << endl;
+		cout << " *NumberDouPoniter: " << *NumberDouPoniter << endl;
+
+	}
+
+	void PointNewAndDeleteTestFun00()
+	{
+		int* NumPointer = new int;
+		*NumPointer = 10;
+		*NumPointer += 10;
+		//60-68
+		cout << "&NumPointer:" << &NumPointer << endl;
+		//80-84
+		cout << "NumPointer:" << NumPointer<<endl;
+		//20
+		cout << "*NumPointer:" << *NumPointer << endl;
+
+		//因为已经delete 这个块内存区域已经不存在了
+		delete NumPointer;
+		cout << "&NumPointer:" << &NumPointer << endl;
+		cout << "NumPointer:" << NumPointer << endl;
+		//cout << "*NumPointer:" << *NumPointer << endl;
+		NumPointer = nullptr;
+		cout << "&NumPointer:" << &NumPointer << endl;
+		cout << "NumPointer:" << NumPointer << endl;
+
+		//指针是存在栈上面的,在这个方法执行完成后销毁
+	}
+
+	void PointNewAndDeleteTestFun01()
+	{
+		int  Array[10] = {};
+		int* Pointer = new int[10];
+
+		cout << sizeof(Pointer)<<endl;
+		cout << sizeof(Array) << endl;
+
+		delete[] Pointer;
+	}
+
+
+
+
+	void PointNewAndDeleteTestFun02()
+	{
+		int* Pointer = new int[10];
+		Pointer[0] = 1;
+		Pointer[1] = 2;
+		Pointer[2] = 4;
+		Pointer[3] = 8;
+		Pointer[4] = 16;
+		cout << "Pointer[0]:" << Pointer[0] << endl;
+		cout << "*Pointer:" << *Pointer << endl;
+		*Pointer = -1;
+		cout << "Pointer[0]:" << Pointer[0] << endl;
+		cout << "*Pointer:" << *Pointer << endl;
+		Pointer += 1;
+		cout << "Pointer[0]:" << Pointer[0] << endl;
+		cout << "*Pointer:" << *Pointer << endl;
+		Pointer += 1;
+		cout << "Pointer[0]:" << Pointer[0] << endl;
+		cout << "*Pointer:" << *Pointer << endl;
+		int* Point2 = &Pointer[0];
+
+		Point2 -= 2;
+		cout << "*Point2:" << *Point2 << endl;
+
+
+
+
+
+	}
+
+	void PointMath()
+	{
+		int Array[3] = { 11,22,33 };
+		
+		cout <<  "Array:" << Array << endl;
+		cout << "&Array[0]:" << Array << endl;
+
+
+		//数组的总字节数
+		cout << "sizeof(Array):" << sizeof(Array)<<endl;
+		//数组中元素类型的单位大小字节数
+		cout << "sizeof(Array[0]):" << sizeof(Array[0])<< endl;
+		//指针大小字节数
+		cout << "sizeof(&Array[0]):" << sizeof(&Array[0]) << endl;
+
+		int* pointer = &Array[0];
+
+	}
+
+	void PointMath01()
+	{
+/*
+		int Array[3] = { 11,22,33 };
+		cout << "Array:" << Array << endl;
+		cout << "&Array:" << &Array << endl;
+		int* AP1;
+		int* Ap2;
+		AP1 = Array+ 1;
+		*/
+	//	Ap2 = &Array+ 1;
+
+
+	}
+
+	void PointAndArrayFun00()
+	{
+		char flower[10] = "rose";
+		cout << flower << "s are red \n";
+
+		char * flower_first = flower;
+
+		cout << flower_first << endl;
+
+		int* MyAddress = (int*)flower_first;
+
+		cout << "MyAddress:" << MyAddress << endl;
+	}
+
+	void PointAndArrayFun01()
+	{
+		char CharArrary[20] = "myArray";
+
+		strcpy(CharArrary, "NewArray");
+
+		cout << CharArrary;
+
+		int aabb=100;
+
+	}
+
+	void PointAndStructFun00()
+	{
+	
+		struct MyStruct
+		{
+			int Numa;
+			float Numb;
+
+		};
+		MyStruct Struct1 = { 10,10.1f };
+		cout << Struct1.Numa << endl;
+		cout << Struct1.Numb << endl;
+
+
+
+		MyStruct* StructPointer = new MyStruct;
+		StructPointer->Numa = 101;
+		StructPointer->Numb = 101.1f;
+
+		cout << StructPointer->Numa << endl;
+		cout << StructPointer->Numb << endl;
+
+		cout << (*StructPointer).Numa << endl;
+		cout << (*StructPointer).Numb << endl;
+		(*StructPointer).Numa = 1002;
+		cout << (*StructPointer).Numa << endl;
+
+		delete StructPointer;
+		StructPointer = nullptr;
+
+		{
+			int aabb = 11;
+		}
+		int  aabb = 102;;
+
+
+
+	}
+
+	void PointAndStructFun01()
+	{
+
+		MyStruct9918* StructPointer;
+
+		StructPointer = PointAndStructFun02();
+		StructPointer->c = 988;
+
+
+
+
+		(* StructPointer).c = 988;
+		cout << StructPointer->c << endl;
+		StructPointer = new MyStruct9918;
+		StructPointer->c = 1007;
+
+
+		MyStruct9918 S2 = *StructPointer;
+
+		cout << S2.c << endl;
+
+		cout << MyDouble << endl;
+
+	}
+
+	MyStruct9918* PointAndStructFun02()
+	{
+		MyStruct9918 Struct998;
+
+		return &Struct998;
+	}
+
+	void PointStrcutArrayFun00()
+	{
+		struct NumT
+		{
+			int Numer;
+
+		};
+
+		NumT N1, N2, N3;
+		N1.Numer = 1;
+		N2.Numer = 2;
+		N3.Numer = 1;
+		const NumT* NumTPointer[3] = { &N1,&N2,&N3 };
+
+		//定义了一个指向指针的指针
+		const NumT* * NPP = NumTPointer;
+		auto AutoNumT = &N1;
+		auto AutoNumTTP = NumTPointer;
+
+		cout << (*(NPP+1))->Numer << endl;
+		cout << AutoNumT->Numer<< endl;
+		cout << (*AutoNumTTP)->Numer<< endl;
+		cout << (*AutoNumTTP) << endl;
+		NumT* MyPointer = const_cast<NumT*>( * AutoNumTTP);
+		MyPointer->Numer = 998;
+
+		cout << MyPointer->Numer << endl;
+
+
+	}
+
+	void ArrayAndVectorFun00()
+	{
+
+		int a1[4] = { 0,1,2,3 };
+
+		vector<int> a2(4);
+		a2[0] = 0;
+		a2[1] = 2;
+		a2[2] = 4;
+		a2[3] = 8;
+		array<int, 4> a3 = {4,5,6,7};
+
+		cout << a2.at(99);
+		
+		
+
+
+	}
+
+	MyStruct9918::MyStruct9918()
+	{
+		
+			cout << "我被构造了";
+		
+	}
+
+	MyStruct9918::~MyStruct9918()
+	{
+		
+			cout << "我被析构了";
+		
+	}
+
+
+	
 }
