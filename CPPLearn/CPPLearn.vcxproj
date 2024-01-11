@@ -126,19 +126,25 @@
     </ItemDefinitionGroup>
     <ItemGroup>
         <ClCompile Include="CPPLearn.cpp" />
+        <ClCompile Include="Lession\Lession0000.cpp" />
         <ClCompile Include="Lession\Lession01.cpp" />
         <ClCompile Include="Lession\Lession02.cpp" />
         <ClCompile Include="Lession\Lession03.cpp" />
         <ClCompile Include="Lession\Lession04.cpp" />
+        <ClCompile Include="Lession\Lession997.cpp" />
         <ClCompile Include="Lession\Lession998.cpp" />
+        <ClCompile Include="Lession\Offer\offer001.cpp" />
     </ItemGroup>
     <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
     <ImportGroup Label="ExtensionTargets" />
     <ItemGroup>
+        <ClInclude Include="Lession\Lession0000.h" />
         <ClInclude Include="Lession\Lession01.h" />
         <ClInclude Include="Lession\Lession02.h" />
         <ClInclude Include="Lession\Lession03.h" />
         <ClInclude Include="Lession\Lession04.h" />
+        <ClInclude Include="Lession\Lession997.h" />
         <ClInclude Include="Lession\Lession998.h" />
+        <ClInclude Include="Lession\Offer\offer001.h" />
     </ItemGroup>
 </Project>

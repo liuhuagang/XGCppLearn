@@ -1,2 +1,2 @@
-﻿  Lession998.cpp
-  CPPLearn.vcxproj -> E:\CPP_Project\CPPLearn\x64\Debug\CPPLearn.exe
+﻿  offer001.cpp
+E:\CPP_Project\CPPLearn\CPPLearn\Lession\Offer\offer001.h(113,15): error C3861: 'countRange': identifier not found

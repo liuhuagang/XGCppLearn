@@ -37,6 +37,11 @@ namespace L04
 
 		}
 
+		for (int j = 10 ;j<50;j++)
+		{
+
+
+		}
 		
 		cout << "for test End:" << i << endl;
 	}
